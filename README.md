@@ -3,6 +3,8 @@
 ## Description
 This project demonstrates a complete ETL (Extract, Transform, Load) pipeline using Apache Airflow, PostgreSQL, and web scraping with Python. The workflow scrapes book data from a website, processes the data, and stores it in a PostgreSQL database using Airflow for orchestration.
 
+![project diagram](assets/project_diagram.png)
+
 ## Features
 - **Data Extraction**: Scrapes book data (title, price, and rating) from the "Books to Scrape" website.
 - **Data Transformation**: Cleans and removes duplicate records.
