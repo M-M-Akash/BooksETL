@@ -1,4 +1,4 @@
-# Project: Orchestrated Book Scraper with PostgreSQL and Apache Airflow
+# Orchestrated Book Scraper with PostgreSQL and Apache Airflow
 
 ## Description
 This project demonstrates a complete ETL (Extract, Transform, Load) pipeline using Apache Airflow, PostgreSQL, and web scraping with Python. The workflow scrapes book data from a website, processes the data, and stores it in a PostgreSQL database using Airflow for orchestration.
