@@ -41,6 +41,9 @@ docker compose up
    - **Password**: root
 
 3. Create a server:
+
+
+
    - **Name**: `ps_db`
    - **Connection**: Use the details from inspecting the PostgreSQL container.
      ```bash
@@ -51,8 +54,8 @@ docker compose up
    - **Username**: `airflow`
    - **Password**: `airflow`
 
-   ![PgAdmin Server Configuration 1](assets/Screenshot from 2025-01-12 07-19-44.png)
-   ![PgAdmin Server Configuration 2](assets/Screenshot from 2025-01-12 07-19-00.png)
+![PgAdmin Server Configuration 1](assets/Screenshot%from%2025-01-12%07-19-44.png)
+![PgAdmin Server Configuration 2](assets/Screenshot%from%2025-01-12%07-19-00.png)
 
 4. Create a database named `books` within the server.
 
