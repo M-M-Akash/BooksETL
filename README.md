@@ -46,6 +46,7 @@ docker compose up
 
    - **Name**: `ps_db`
    - **Connection**: Use the details from inspecting the PostgreSQL container.
+   ![PgAdmin Server Configuration 2](assets/postgres_ip_address.png)
      ```bash
      docker inspect <container_id>
      ```
@@ -55,7 +56,7 @@ docker compose up
    - **Password**: `airflow`
 
 ![PgAdmin Server Configuration 1](assets/postgres_server_connection.png)
-![PgAdmin Server Configuration 2](assets/postgres_ip_address.png)
+
 
 4. Create a database named `books` within the server.
 
@@ -70,19 +71,21 @@ In the Airflow web UI:
    - **Login**: `airflow`
    - **Password**: `airflow`
    - **Port**: `5432`
-   
-  ![PgAdmin Configuration 1](./Screenshot%20from%202025-01-12%2007-19-44.png)
-  ![PgAdmin Configuration 2](./Screenshot%20from%202025-01-12%2007-19-00.png)
+
+  ![PgAdmin Configuration 1](assets/airflow_connections.png)
 
 ### Step 5: Trigger the DAG
 1. Access the Airflow UI at `http://localhost:8080`.
 2. Enable the DAG named `fetch_and_store_books`.
 3. Trigger the DAG manually or wait for the scheduled interval.
+  ![PgAdmin Configuration 1](assets/airflow_connections.png)
 
 ## DAG Workflow
 1. **Fetch Book Data**: Scrapes book information from the "Books to Scrape" website.
 2. **Create Table**: Ensures the `books` table exists in PostgreSQL.
 3. **Insert Data**: Loads the scraped data into PostgreSQL while avoiding duplicate entries using the `ON CONFLICT DO NOTHING` clause.
+  ![PgAdmin Configuration 1](assets/dag_frame.png)
+
 
 ## Project Files
 - **`docker-compose.yml`**: Configures Airflow and PostgreSQL containers.
