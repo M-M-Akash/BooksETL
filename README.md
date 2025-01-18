@@ -46,10 +46,12 @@ docker compose up
 
    - **Name**: `ps_db`
    - **Connection**: Use the details from inspecting the PostgreSQL container.
-   ![PgAdmin Server Configuration 2](assets/postgres_ip_address.png)
+
      ```bash
      docker inspect <container_id>
      ```
+     ![PgAdmin Server Configuration 2](assets/postgres_ip_address.png)
+     
      Use the `IPAddress` value (e.g., `172.18.0.5`) and port `5432`.
 
    - **Username**: `airflow`
@@ -78,7 +80,6 @@ In the Airflow web UI:
 1. Access the Airflow UI at `http://localhost:8080`.
 2. Enable the DAG named `fetch_and_store_books`.
 3. Trigger the DAG manually or wait for the scheduled interval.
-  ![PgAdmin Configuration 1](assets/airflow_connections.png)
 
 ## DAG Workflow
 1. **Fetch Book Data**: Scrapes book information from the "Books to Scrape" website.
